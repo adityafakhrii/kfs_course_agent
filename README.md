@@ -10,7 +10,7 @@ Agent multi-fungsi berbasis **Google ADK (Agent Development Kit)** buat:
 
 ---
 
-## ✨ Fitur Utama
+## Fitur Utama
 
 - **Index & Query Kursus** dari `https://api.codepolitan.com/course?page=1&limit=1000`
 - **Normalisasi field** sesuai struktur JSON (lihat “Skema Data”)
@@ -21,7 +21,7 @@ Agent multi-fungsi berbasis **Google ADK (Agent Development Kit)** buat:
 
 ---
 
-## 🧱 Prasyarat
+## Prasyarat
 
 - Python **3.10+**
 - API key **Google AI Studio** (Gemini 2)
@@ -29,7 +29,7 @@ Agent multi-fungsi berbasis **Google ADK (Agent Development Kit)** buat:
 
 ---
 
-## 🚀 Quickstart
+## Quickstart
 
 ```bash
 # 1) Setup environment
@@ -72,7 +72,7 @@ adk run kfs_search_agent
 
 ---
 
-## 🧩 Arsitektur & Alur
+## Arsitektur & Alur
 
 ```
 adk_apps/
@@ -90,7 +90,7 @@ adk_apps/
 
 ---
 
-## 🗃️ Skema Data (Disamakan dengan Contoh)
+## Skema Data (Disamakan dengan Contoh)
 
 Contoh item kursus (API → dinormalisasi **tanpa mengubah nama field utama**):
 
@@ -136,7 +136,7 @@ Contoh item kursus (API → dinormalisasi **tanpa mengubah nama field utama**):
 
 ---
 
-## 🛠️ Tools yang Tersedia
+## Tools yang Tersedia
 
 ### Di `kfs_course_agent`
 - `refresh_courses()`  
@@ -166,7 +166,7 @@ Contoh item kursus (API → dinormalisasi **tanpa mengubah nama field utama**):
 
 ---
 
-## 🧪 Contoh Penggunaan (Prompt)
+## Contoh Penggunaan (Prompt)
 
 **Course Agent**
 - “Ada kelas **Laravel** untuk **pemula** di bawah **300k**?”
@@ -180,7 +180,7 @@ Contoh item kursus (API → dinormalisasi **tanpa mengubah nama field utama**):
 
 ---
 
-## ⚙️ Konfigurasi
+## Konfigurasi
 
 - **API endpoint**: `https://api.codepolitan.com/course?page=1&limit=1000`  
   (Bisa diubah di `API_URL` dalam `kfs_course_agent/agent.py`)
@@ -189,7 +189,7 @@ Contoh item kursus (API → dinormalisasi **tanpa mengubah nama field utama**):
 
 ---
 
-## 🧯 Troubleshooting
+## Troubleshooting
 
 - **`HTTP 4xx/5xx` saat fetch kursus**  
   Cek koneksi, rate limit, atau ubah `timeout` di helper `_http_get_json`.
@@ -202,7 +202,7 @@ Contoh item kursus (API → dinormalisasi **tanpa mengubah nama field utama**):
 
 ---
 
-## 🧰 Kustomisasi Cepat
+## ustomisasi Cepat
 
 - **Bobot skor fuzzy**: atur fungsi `_score` (tuning relevansi).
 - **Field mapping**: jika API menambah field baru, extend `_normalize_course`.
@@ -210,7 +210,7 @@ Contoh item kursus (API → dinormalisasi **tanpa mengubah nama field utama**):
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] Router otomatis (pilih Course/Search Agent berdasar intent)  
 - [ ] Pagination & incremental refresh  
@@ -219,26 +219,26 @@ Contoh item kursus (API → dinormalisasi **tanpa mengubah nama field utama**):
 
 ---
 
-## 🤝 Kontribusi
+## Kontribusi
 
 PR & issue welcome. Ikuti style yang ada (PEP8, docstring singkat, fungsi pure di helpers).
 
 ---
 
-## 📄 Lisensi
+## Lisensi
 
-MIT (atau sesuaikan kebutuhan projek lo).
+MIT (atau sesuaikan kebutuhan projek).
 
 ---
 
-## 🙏 Kredit
+## Kredit
 
 - **Google ADK** untuk kerangka agent + built-in tools  
 - **Codepolitan/KelasFullstack** untuk API kursus
 
 ---
 
-## 🔎 Lampiran: Contoh Query CLI (opsional)
+## Lampiran: Contoh Query CLI (opsional)
 
 ```bash
 # Cek respons API mentah
